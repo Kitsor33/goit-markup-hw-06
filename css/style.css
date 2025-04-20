@@ -1,8 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    max-width: 1440px;  
+
 }
 a{
     text-decoration: none;
@@ -27,9 +26,9 @@ body {
 }
 /* HEADER */
 .container {
-    width: 1158px;
+    width: 320px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 16px;
 }
 .header {
     
@@ -71,16 +70,14 @@ body {
     line-height: 1.5;
     padding: 24px 0;
     position: relative;
-    color: #404bbf;
+   
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-navigation:hover,
 .header-navigation:focus {
     color: #404bbf;
   }
-  .header-navigation.current {
-    color: #404bbf;
-}
+
 .header-navigation.current::after {
     content: '';
     width: 100%;
@@ -165,8 +162,10 @@ body {
 }
 
 /* Advantages Section */
+
 .advantages-section {
-    padding: 120px 0;
+    /* padding: 120px 0; */
+    padding: 96px 0;
 }
 .visually-hidden {
     position: absolute;
@@ -181,24 +180,26 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
-.advantages-list {
+ .advantages-list {
     display: flex;
-    gap: 24px;    
-}
-.advantages-list-item{
-    width: calc((100% - 72px) / 4);
-  
-}
+    flex-wrap: wrap;
+    gap: 72px;    
+} 
+ .advantages-list-item{
+    /* width: calc((100% - 72px) / 4); */
+    height: 120px;
+} 
 
 .svg-advantages{
-    display: flex;
+    display: none;
+    /* display: flex;
     align-items: center;
     justify-content: center;
     height: 112px;
     background-color: #f4f4fd; 
     border-radius: 4px; 
     border: 1px solid #8e8f99;
-    margin-bottom: 8px;
+    margin-bottom: 8px; */
 }
 .adv-name {
     font-weight: 500;
@@ -692,4 +693,42 @@ body {
 }
 .modal-field-one{
     margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        width: 768px;
+    }
+    .advantages-section{
+        padding: 96px 0;
+    }
+    .advantages-list {
+        gap: 72px 24px;
+    }
+    .advantages-list-item{
+        width: calc((100% - 24px) / 2);
+        height: 120px;
+    }
+}
+@media screen and (min-width: 1158px){
+    .container{
+        width: 1158px;
+        padding: 0 15px;
+    }
+    .advantages-section{
+        padding: 120px 0;
+    }
+    .advantages-list-item{
+        width: calc((100% - 72px) / 4);
+    }
+    .svg-advantages{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 112px;
+        background-color: #f4f4fd; 
+        border-radius: 4px; 
+        border: 1px solid #8e8f99;
+        margin-bottom: 8px;
+    }
 }
